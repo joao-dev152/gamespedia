@@ -1,7 +1,7 @@
 function pesquisar() {
     // Seleciona a seção onde os resultados serão exibidos pelo ID "resultados-pesquisa"
-    let infosHTML = document.getElementById("resultados-pesquisa");
     let CampoPesquisa = document.getElementById("campo-pesquisa").value;
+    let infosHTML = document.getElementById("resultados-pesquisa");
     // Inicializa uma string vazia para armazenar os resultados da pesquisa
     let resultados = "";
     let título = "";
@@ -21,7 +21,7 @@ function pesquisar() {
         if(título.includes(CampoPesquisa) || descrição.includes(CampoPesquisa) || tags.includes(CampoPesquisa)) {
           // Concatena HTML para cada resultado, formatando com template literals
           resultados += `
-          <div class=""> <h2> <a href="${dado.link_Ex}" target="_blank">${dado.título}</a> </h2>
+          <div class="item-resultado"> <h2> <a href="${dado.link_Ex}" target="_blank">${dado.título}</a> </h2>
           <p class="descricao-meta"> ${dado.descrição} </p>
           </div>
         `;
@@ -33,8 +33,8 @@ function pesquisar() {
         resultados = "<p>Nada Foi Encontrado</p>"
       }
 
-    // **Importante:** Essa linha sobrescreve todos os resultados anteriores
+    // Importante: Essa linha sobrescreve todos os resultados anteriores
     // com uma string vazia. Isso faz com que apenas o último resultado
     // seja exibido. Para exibir todos os resultados, remova essa linha.
     infosHTML.innerHTML = resultados;
-  }
+};

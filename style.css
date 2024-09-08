@@ -5,6 +5,9 @@
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
     background-color: #808080; /* Cor de fundo da página */
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -14,10 +17,19 @@ body {
     padding: 0; /* Remove o padding padrão */
 }
 
+.button-container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    margin: 0 10px;
+}
+
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #2a0995; /* Cor do texto */
+    font-size: 5rem; /* Tamanho da fonte */
+    color: #000000; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
 }
@@ -65,13 +77,13 @@ section button:hover {
     height: 46vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
+    padding: 1rem; /* Espaçamento interno *./
     border-radius: 0.6rem; /* Borda arredondada */
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-    background: #FFFFFF; /* Cor de fundo dos itens */
+    background: #ADD8E6; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
@@ -103,8 +115,8 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #F5F7F8; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
+    background-color: #D3D3D3; /* Cor de fundo do rodapé */
+    color: #000000; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
