@@ -120,15 +120,14 @@ section button:hover {
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
-/* Estiliza o rodapé da página */
 footer {
     background-color: #D3D3D3;
     color: #000000;
     text-align: center;
-    padding: 1rem 0; /* Adicionado um pouco de respiro */
     width: 100%;
-    /* Removido: position absolute e bottom 0 */
-    font-size: 1rem;
+    position: fixed; /* Fica sempre visível na tela */
+    bottom: 0;
+    left: 0;
 }
 
 @media (max-width: 768px) {
