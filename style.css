@@ -3,18 +3,25 @@
 
 /* Estiliza o corpo da página */
 body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #808080; /* Cor de fundo da página */
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #808080;
     background-image: url('background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Preenche a altura total da viewport */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo tenha no mínimo a altura da tela */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1; /* Isso empurra o footer para o final da página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Mantém sua pesquisa centralizada no meio da tela */
 }
 
 .button-container {
@@ -115,14 +122,13 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #D3D3D3; /* Cor de fundo do rodapé */
-    color: #000000; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
+    background-color: #D3D3D3;
+    color: #000000;
+    text-align: center;
+    padding: 1rem 0; /* Adicionado um pouco de respiro */
+    width: 100%;
+    /* Removido: position absolute e bottom 0 */
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
